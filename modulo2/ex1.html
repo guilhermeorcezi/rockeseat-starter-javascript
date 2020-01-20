@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>ex1</title>
+    </head>
+    <body>
+        
+        <div id="app">
+            <button onclick="gerarQuadrado()">Clicar</button>
+        </div>
+
+        <script>
+        
+        var container = document.querySelector('#app');
+
+        function gerarQuadrado(){
+            newElement = document.createElement('div');
+
+            newElement.style.width = 100;
+            newElement.style.height = 100;
+            newElement.style.backgroundColor = 'red';
+
+            container.appendChild(newElement);
+        }
+        
+        
+        
+        </script>
+    </body>
+</html>

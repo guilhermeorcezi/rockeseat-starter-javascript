@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div></div>
+    <button id="new">
+      Criar quadrado vermelho
+    </button>
+
+    <div id="squad"></div>
+
+    <script>
+      var btnElement = document.getElementById("new");
+      var squaresElement = document.getElementById("squad");
+      btnElement.onclick = function() {
+        var square = document.createElement("div");
+        square.style.width = "100px";
+        square.style.height = "100px";
+        square.style.backgroundColor = "#F00";
+
+        square.onmouseover = function() {
+          square.style.backgroundColor = getRandomColor();
+        };
+        squaresElement.appendChild(square);
+      };
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+    </script>
+  </body>
+</html>

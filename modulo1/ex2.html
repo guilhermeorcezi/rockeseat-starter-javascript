@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>ex2</title>
+    </head>
+    <body>
+        
+    <script>
+        function pares(x,y){
+            var res = [];
+            var count=0;
+
+            for(i=x; i<=y; i++){
+                if(i % 2 == 0){
+                    res[count] = i;
+                    count++;
+                }
+            }
+            return res;
+        }
+
+         console.log(pares(32, 321));
+
+    </script>
+    </body>
+</html>
