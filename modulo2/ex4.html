@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ex4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="app">
+        <ul></ul>
+
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+
+    </div>
+    
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+
+      listElement = document.querySelector('#app ul');
+      btnElement = document.querySelector('#app button');
+      inputElement = document.querySelector('#app input');
+
+      function renderList(){
+        for(valores of nomes){
+            var liElement = document.createElement('li');
+            var nameText = document.createTextNode(valores);
+
+            liElement.appendChild(nameText);
+            listElement.appendChild(liElement);
+        }
+      }
+
+      renderList();
+
+      function adicionar(){
+        newTodo = inputElement.value;
+        nomes = newTodo;
+
+        renderList();
+        inputElement.value = '';
+      }
+
+    </script>
+  </body>
+</html>
